@@ -216,5 +216,53 @@ namespace MVCTitanic10PMBatch.Controllers
 
             return RedirectToAction("Index1", "Home",emp);
         }
+
+        public RedirectToRouteResult getmeHonda8()
+        {
+            return RedirectToRoute("Default2");
+        }
+        public ActionResult GetmeHonda9()
+        {
+            StudentModel st = new Models.StudentModel();
+            st.StudentId = 1;
+            st.StudentName = "Prince";
+
+            StudentModel st1 = new Models.StudentModel();
+            st1.StudentId = 2;
+            st1.StudentName = "Vijaya";
+
+            StudentModel st2 = new Models.StudentModel();
+            st2.StudentId = 3;
+            st2.StudentName = "Nishikanth";
+
+            List<StudentModel> listObj = new List<StudentModel>();
+            listObj.Add(st);
+            listObj.Add(st1);
+            listObj.Add(st2);
+
+            return View(listObj);
+        }
+
+        public PartialViewResult GetmeHonda10()
+        {
+            StudentModel st = new Models.StudentModel();
+            st.StudentId = 1;
+            st.StudentName = "Prince";
+
+            StudentModel st1 = new Models.StudentModel();
+            st1.StudentId = 2;
+            st1.StudentName = "Vijaya";
+
+            StudentModel st2 = new Models.StudentModel();
+            st2.StudentId = 3;
+            st2.StudentName = "Nishikanth";
+
+            List<StudentModel> listObj = new List<StudentModel>();
+            listObj.Add(st);
+            listObj.Add(st1);
+            listObj.Add(st2);
+
+            return PartialView("_MyPartialView", listObj);
+        }
     }
 }

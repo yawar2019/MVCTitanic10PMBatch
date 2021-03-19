@@ -24,7 +24,7 @@ namespace MVCTitanic10PMBatch
             routes.MapRoute(
               name: "Default2",
               url: "hospital/Biryani",
-              defaults: new { controller = "Default", action = "Index", id = UrlParameter.Optional }
+              defaults: new { controller = "Default", action = "SendData", id = UrlParameter.Optional }
           );
 
 

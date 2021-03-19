@@ -1,0 +1,15 @@
+﻿@model List<MVCTitanic10PMBatch.Models.StudentModel>
+
+<table>
+    <tr>
+        <td>Student Id</td>
+        <td>Name</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentId</td>
+            <td>@item.StudentName</td>
+        </tr>
+    }
+</table>

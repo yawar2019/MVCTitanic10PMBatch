@@ -1,0 +1,20 @@
+﻿@model List<MVCTitanic10PMBatch.Models.StudentModel>
+@{
+    ViewBag.Title = "GetmeHonda9";
+}
+
+<h2>GetmeHonda9</h2>
+
+@{
+    var s = Html.Partial("_MyPartialView", Model);
+    int a = 11;
+    if (a == 10)
+    {
+        @s
+    }
+        }
+<br />
+
+@{
+    Html.RenderPartial("_MyPartialView", Model);
+    }

@@ -140,6 +140,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +166,8 @@
     <Content Include="Views\Default\SendData5.cshtml" />
     <Content Include="Views\Default\getmeHonda.cshtml" />
     <Content Include="Views\Default\getmeHonda5.cshtml" />
+    <Content Include="Views\Default\GetmeHonda9.cshtml" />
+    <Content Include="Views\Shared\_MyPartialView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
