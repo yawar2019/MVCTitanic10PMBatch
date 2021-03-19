@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCTitanic10PMBatch.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,14 @@ namespace MVCTitanic10PMBatch.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            return View();
+            return Content(id.ToString());
+        }
+
+        public ActionResult Index1( EmployeeModel emp)
+        {
+            return Content(emp.EmpId.ToString());
         }
     }
 }

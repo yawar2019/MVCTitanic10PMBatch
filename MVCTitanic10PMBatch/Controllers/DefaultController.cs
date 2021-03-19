@@ -174,5 +174,47 @@ namespace MVCTitanic10PMBatch.Controllers
 
             return View(edObj);
         }
+
+        public ViewResult getmeHonda() {
+            return View() ;
+        }
+        public ActionResult getmeHonda2()
+        {
+            return Redirect("http://www.google.com");
+        }
+        public RedirectResult getmeHonda3() {
+
+            return Redirect("http://www.google.com");
+        }
+        public RedirectResult getmeHonda4()
+        {
+            return Redirect("getmeHonda5/1");
+        }
+
+        public ViewResult getmeHonda5(int id)
+        {
+            ViewBag.id = id;
+            return View();
+        }
+
+        EmployeeModel emp = new EmployeeModel();
+       
+
+
+        public RedirectToRouteResult getmeHonda6()
+        {
+
+            return RedirectToAction("Index","Home",new {id=1});
+        }
+
+        public RedirectToRouteResult getmeHonda7()
+        {
+
+            emp.EmpId = 1211;
+            emp.EmpName = "Prince";
+            emp.EmpSalary = 190000;
+
+            return RedirectToAction("Index1", "Home",emp);
+        }
     }
 }

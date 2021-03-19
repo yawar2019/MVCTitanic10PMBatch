@@ -163,6 +163,8 @@
     <Content Include="Views\Default\SendData3.cshtml" />
     <Content Include="Views\Default\SendData4.cshtml" />
     <Content Include="Views\Default\SendData5.cshtml" />
+    <Content Include="Views\Default\getmeHonda.cshtml" />
+    <Content Include="Views\Default\getmeHonda5.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
