@@ -264,5 +264,40 @@ namespace MVCTitanic10PMBatch.Controllers
 
             return PartialView("_MyPartialView", listObj);
         }
+
+        public FileResult GetmeHonda11()
+        {
+            return File("~/Web.config","text/plain");
+        }
+        public FileResult GetmeHonda12()
+        {
+            return File("~/ActionResult.pdf", "application/pdf");
+        }
+        public FileResult GetmeHonda13()
+        {
+            return File("~/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
+        }
+        public JsonResult GetmeHonda14()
+        {
+            StudentModel st = new Models.StudentModel();
+            st.StudentId = 1;
+            st.StudentName = "Prince";
+
+            StudentModel st1 = new Models.StudentModel();
+            st1.StudentId = 2;
+            st1.StudentName = "Vijaya";
+
+            StudentModel st2 = new Models.StudentModel();
+            st2.StudentId = 3;
+            st2.StudentName = "Nishikanth";
+
+            List<StudentModel> listObj = new List<StudentModel>();
+            listObj.Add(st);
+            listObj.Add(st1);
+            listObj.Add(st2);
+
+            return Json(listObj,JsonRequestBehavior.AllowGet);
+        }
+
     }
 }
