@@ -18,28 +18,28 @@ namespace MVCTitanic10PMBatch.Controllers
             return "Hello";
         }
 
-      
+
         public ActionResult GetMeView()
         {
             return View("~/Views/Home/index.cshtml");
 
         }
 
-        public string getKitkat(int? id,string name, string designation)
+        public string getKitkat(int? id, string name, string designation)
         {
 
-            return "My Emp id "+id+" Name is"+name+" Designation:"+designation;
+            return "My Emp id " + id + " Name is" + name + " Designation:" + designation;
         }
 
         public string getKitkat1(int? id)
         {
 
-            return "My Emp id " + id + " Name is" +Request.QueryString["name"] + " Designation:"  +Request.QueryString["designation"];
+            return "My Emp id " + id + " Name is" + Request.QueryString["name"] + " Designation:" + Request.QueryString["designation"];
         }
 
         public ActionResult SendData()
         {
-          
+
             ViewBag.info = "Virat kohli";
             return View();
         }
@@ -59,7 +59,7 @@ namespace MVCTitanic10PMBatch.Controllers
         public ActionResult SendData2()
         {
             List<EmployeeModel> listObj = new List<EmployeeModel>();
-             
+
 
             EmployeeModel emp = new EmployeeModel();
             emp.EmpId = 1211;
@@ -95,7 +95,7 @@ namespace MVCTitanic10PMBatch.Controllers
             emp.EmpSalary = 190000;
 
             //object model=emp;
-           
+
             return View(emp);
         }
 
@@ -126,7 +126,7 @@ namespace MVCTitanic10PMBatch.Controllers
 
 
 
-            
+
             return View(listObj);
         }
 
@@ -175,14 +175,16 @@ namespace MVCTitanic10PMBatch.Controllers
             return View(edObj);
         }
 
-        public ViewResult getmeHonda() {
-            return View() ;
+        public ViewResult getmeHonda()
+        {
+            return View();
         }
         public ActionResult getmeHonda2()
         {
             return Redirect("http://www.google.com");
         }
-        public RedirectResult getmeHonda3() {
+        public RedirectResult getmeHonda3()
+        {
 
             return Redirect("http://www.google.com");
         }
@@ -198,13 +200,13 @@ namespace MVCTitanic10PMBatch.Controllers
         }
 
         EmployeeModel emp = new EmployeeModel();
-       
+
 
 
         public RedirectToRouteResult getmeHonda6()
         {
 
-            return RedirectToAction("Index","Home",new {id=1});
+            return RedirectToAction("Index", "Home", new { id = 1 });
         }
 
         public RedirectToRouteResult getmeHonda7()
@@ -214,7 +216,7 @@ namespace MVCTitanic10PMBatch.Controllers
             emp.EmpName = "Prince";
             emp.EmpSalary = 190000;
 
-            return RedirectToAction("Index1", "Home",emp);
+            return RedirectToAction("Index1", "Home", emp);
         }
 
         public RedirectToRouteResult getmeHonda8()
@@ -267,7 +269,7 @@ namespace MVCTitanic10PMBatch.Controllers
 
         public FileResult GetmeHonda11()
         {
-            return File("~/Web.config","text/plain");
+            return File("~/Web.config", "text/plain");
         }
         public FileResult GetmeHonda12()
         {
@@ -296,8 +298,24 @@ namespace MVCTitanic10PMBatch.Controllers
             listObj.Add(st1);
             listObj.Add(st2);
 
-            return Json(listObj,JsonRequestBehavior.AllowGet);
+            return Json(listObj, JsonRequestBehavior.AllowGet);
         }
 
+        public ContentResult GetmeHonda15(int? id)
+        {
+            if (id == 1)
+            {
+                return Content("Hello World");
+            }
+            else if (id ==2)
+            {
+                return Content("<p style='color:red'>Hello World</p>");
+
+            }
+            else
+	        {
+                return Content("<script>alert('Hello World')</script>");
+            }
+        }
     }
 }
