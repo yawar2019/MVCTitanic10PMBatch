@@ -22,7 +22,67 @@ namespace AdonetExample.Controllers
         [HttpPost]
         public ActionResult Create(EmployeeModel emp)
         {
-            return View();
+            int i = db.SaveEmployees(emp);
+
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        //[HttpPost]
+        //public ActionResult Create(FormCollection frm)
+        //{
+        //    return View();
+        //}
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            EmployeeModel emp = db.getEmployeeById(id);
+            return View(emp);
+        }
+        [HttpPost]
+        public ActionResult Edit(EmployeeModel emp)
+        {
+
+            int i = db.UpdateEmployees(emp);
+
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.getEmployeeById(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+
+            int i = db.DeleteEmployee(id);
+
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
