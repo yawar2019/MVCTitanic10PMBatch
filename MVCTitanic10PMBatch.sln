@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTitanic10PMBatch", "MVCT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdonetExample", "AdonetExample\AdonetExample.csproj", "{C9953ECC-FAE8-4FAF-BD9D-7F6681C2E95A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApproach", "DatabaseApproach\DatabaseApproach.csproj", "{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C9953ECC-FAE8-4FAF-BD9D-7F6681C2E95A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9953ECC-FAE8-4FAF-BD9D-7F6681C2E95A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9953ECC-FAE8-4FAF-BD9D-7F6681C2E95A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
