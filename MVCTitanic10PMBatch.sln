@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdonetExample", "AdonetExam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApproach", "DatabaseApproach\DatabaseApproach.csproj", "{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{45AF23DA-7547-4097-AD8A-2D6C9B326E54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45AF23DA-7547-4097-AD8A-2D6C9B326E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AF23DA-7547-4097-AD8A-2D6C9B326E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45AF23DA-7547-4097-AD8A-2D6C9B326E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45AF23DA-7547-4097-AD8A-2D6C9B326E54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
