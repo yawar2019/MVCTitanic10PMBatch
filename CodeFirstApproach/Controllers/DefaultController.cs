@@ -55,6 +55,29 @@ namespace CodeFirstApproach.Controllers
             }
 
         }
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.EmployeeModels.Find(id);
+            return View(emp);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            EmployeeModel emp = db.EmployeeModels.Find(id);
+            db.EmployeeModels.Remove(emp);
+
+            int i = db.SaveChanges();
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(emp);
+            }
+
+        }
 
     }
 }
