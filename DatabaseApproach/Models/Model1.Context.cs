@@ -13,10 +13,10 @@ namespace DatabaseApproach.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EmployeeEntities1 : DbContext
+    public partial class vaishnavModiEntities : DbContext
     {
-        public EmployeeEntities1()
-            : base("name=EmployeeEntities1")
+        public vaishnavModiEntities()
+            : base("name=vaishnavModiEntities")
         {
         }
     
@@ -25,6 +25,7 @@ namespace DatabaseApproach.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<employeeDetail> employeeDetails { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<EmployeeModel> EmployeeModels { get; set; }
     }
 }

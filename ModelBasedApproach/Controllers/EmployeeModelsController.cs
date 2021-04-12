@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ModelBasedApproach;
 
-namespace ModelBasedApproach.Controllers
+namespace ModelBasedApproach.Controllers  
 {
     public class EmployeeModelsController : Controller
     {
