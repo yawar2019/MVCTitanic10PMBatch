@@ -147,13 +147,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104061726475_InitialCreate.cs" />
-    <Compile Include="Migrations\202104061726475_InitialCreate.designer.cs">
-      <DependentUpon>202104061726475_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104141646470_UpdatedDesignation.cs" />
-    <Compile Include="Migrations\202104141646470_UpdatedDesignation.designer.cs">
-      <DependentUpon>202104141646470_UpdatedDesignation.cs</DependentUpon>
+    <Compile Include="Migrations\202104141722511_InitialCreate.cs" />
+    <Compile Include="Migrations\202104141722511_InitialCreate.designer.cs">
+      <DependentUpon>202104141722511_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EmployeeContext.cs" />
@@ -187,11 +183,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104061726475_InitialCreate.resx">
-      <DependentUpon>202104061726475_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104141646470_UpdatedDesignation.resx">
-      <DependentUpon>202104141646470_UpdatedDesignation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104141722511_InitialCreate.resx">
+      <DependentUpon>202104141722511_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

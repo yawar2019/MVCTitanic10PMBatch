@@ -15,5 +15,6 @@ namespace CodeFirstApproach.Models
         public string EmpName { get; set; }
         public int EmpSalary { get; set; }
         public string Designation { get; set; }
+        public bool Status { get; set; }
     }
 }

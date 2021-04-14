@@ -10,7 +10,6 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CodeFirstApproach.Models.EmployeeContext";
         }
 
         protected override void Seed(CodeFirstApproach.Models.EmployeeContext context)

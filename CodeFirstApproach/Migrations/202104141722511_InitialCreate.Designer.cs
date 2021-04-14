@@ -7,13 +7,13 @@ namespace CodeFirstApproach.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class UpdatedDesignation : IMigrationMetadata
+    public sealed partial class InitialCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdatedDesignation));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104141646470_UpdatedDesignation"; }
+            get { return "202104141722511_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

@@ -14,6 +14,8 @@
                         EmpId = c.Int(nullable: false, identity: true),
                         EmpName = c.String(),
                         EmpSalary = c.Int(nullable: false),
+                        Designation = c.String(),
+                        Status = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.EmpId);
             

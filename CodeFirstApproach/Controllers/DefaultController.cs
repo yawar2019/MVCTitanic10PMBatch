@@ -81,3 +81,7 @@ namespace CodeFirstApproach.Controllers
 
     }
 }
+
+//Enable-migrations -Force
+//add-migration updatedesignation
+//update-databse
