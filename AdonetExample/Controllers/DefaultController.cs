@@ -15,6 +15,8 @@ namespace AdonetExample.Controllers
         {
             return View(db.getEmployees());
         }
+
+
         public ActionResult Create()
         {
             return View();
