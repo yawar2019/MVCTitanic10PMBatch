@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace AdonetExample.Models
     public class EmployeeModel
     {
         public int EmpId { get; set; }
+        [Display(Name = "Employee Name")]
         public string EmpName { get; set; }
         public int EmpSalary { get; set; }
 

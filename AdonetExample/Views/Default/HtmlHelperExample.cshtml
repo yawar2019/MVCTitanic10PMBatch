@@ -1,0 +1,64 @@
+﻿@using AdonetExample.MyControl
+@model AdonetExample.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+<script>
+    function fun() {
+
+        alert("great Deal");
+    }
+
+</script>
+<h2>HtmlHelperExample</h2>
+<input type="text" id="firstName" name="firstName" value="Prince" style="background-color:orange;"  class="form-control" onclick="fun()" />
+<br />
+@Html.TextBox("lastName",null,new { style = "background-color:skyblue",@class="form-control" ,id="MiddleName", onclick = "fun()" })
+@Html.TextBoxFor(s=>s.EmpName, new { style = "background-color:skyblue", @class = "form-control", id = "MiddleName", onclick = "fun()" })
+@Html.Editor("lastName2")
+@Html.EditorFor(s=>s.EmpId)
+@Html.EditorFor(s => s.EmpName)<br /><br />
+
+@Html.EditorForModel(Model)
+
+@Html.LabelFor(s=>s.EmpName)
+
+
+@Html.Password("pwd","tintin")
+<span>Java</span>@Html.CheckBox("cbjava",true)
+<span>Dotnet</span>@Html.CheckBox("cbDotnet")
+
+
+<span>Male</span>@Html.RadioButton("Gender","Male")
+<span>FeMale</span>@Html.RadioButton("Gender", "FeMale")
+
+@Html.DropDownList("Country", new List<SelectListItem>(){
+    new SelectListItem {Text="India",Value="India"},
+    new SelectListItem {Text="sri lanka",Value="srilanka",Selected=true},
+    new SelectListItem {Text="Bangladesh",Value="Bangladesh"},
+})
+
+@Html.DropDownList("department")
+
+@Html.DropDownList("deptId", (IEnumerable<SelectListItem>) ViewBag.department,"Select Department")
+
+@Html.TextArea("Address","hyd",5,20,null)
+
+
+@mycontrol.MyLabel("I agree i know telugu")
+
+@Html.createUrControl("text")<br />
+@Html.createUrControl("checkbox")<br />
+@Html.createUrControl("radio")<br />
+@Html.createUrControl("file")<br />
+
+
+@helper labelbyrazzorcode(string content)
+{
+    <label>@content</label>
+}
+@labelbyrazzorcode("hi this is ali")
+
+
+
+
