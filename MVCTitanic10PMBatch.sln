@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTitanic10PMBatch", "MVCTitanic10PMBatch\MVCTitanic10PMBatch.csproj", "{836A0803-1A32-4C15-8462-B3A05C50D63F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdonetExample", "AdonetExample\AdonetExample.csproj", "{C9953ECC-FAE8-4FAF-BD9D-7F6681C2E95A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{836A0803-1A32-4C15-8462-B3A05C50D63F} = {836A0803-1A32-4C15-8462-B3A05C50D63F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApproach", "DatabaseApproach\DatabaseApproach.csproj", "{D4BB0B3B-D580-4501-AD95-8CAB7CB0C74A}"
 EndProject

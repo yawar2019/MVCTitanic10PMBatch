@@ -87,14 +87,25 @@ namespace AdonetExample.Controllers
             }
         }
 
-        public ActionResult HtmlHelperExample() {
+        public ActionResult HtmlHelperExample()
+        {
 
             EmployeeEntities db = new EmployeeEntities();
             EmployeeModel emp = new EmployeeModel();
             emp.EmpName = "Lahrika";
-            ViewBag.department = new SelectList(db.Departments,"DeptId","DeptName");
+            ViewBag.department = new SelectList(db.Departments, "DeptId", "DeptName");
 
             return View(emp);
         }
+
+
+        public ActionResult GetAccessService()
+        {
+            ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
+            ViewBag.info=obj.Add(12, 25);
+            return View();
+        }
+
+
     }
 }
