@@ -103,6 +103,8 @@ namespace AdonetExample.Controllers
         {
             ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
             ViewBag.info=obj.Add(12, 25);
+            ServiceReference2.Service1Client obj1 = new ServiceReference2.Service1Client();
+            ViewBag.info1 = obj1.mull(3, 5);
             return View();
         }
 

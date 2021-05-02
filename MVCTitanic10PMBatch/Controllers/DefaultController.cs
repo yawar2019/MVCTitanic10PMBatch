@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using MVCTitanic10PMBatch.Filter;
 namespace MVCTitanic10PMBatch.Controllers
 {
+    [MyFilter]
     public class DefaultController : Controller
     {
         // GET: Default
@@ -21,6 +22,7 @@ namespace MVCTitanic10PMBatch.Controllers
 
         public ActionResult GetMeView()
         {
+
             return View("~/Views/Home/index.cshtml");
 
         }
@@ -86,9 +88,10 @@ namespace MVCTitanic10PMBatch.Controllers
             ViewBag.info = listObj;
             return View();
         }
-
+       
         public ActionResult SendData3()
         {
+             
             EmployeeModel emp = new EmployeeModel();
             emp.EmpId = 1211;
             emp.EmpName = "Prince";
@@ -98,6 +101,7 @@ namespace MVCTitanic10PMBatch.Controllers
 
             return View(emp);
         }
+
 
         public ActionResult SendData4()
         {
@@ -316,6 +320,13 @@ namespace MVCTitanic10PMBatch.Controllers
 	        {
                 return Content("<script>alert('Hello World')</script>");
             }
+        }
+
+        [MyFilter]
+        public ActionResult ElectionResult() {
+            ViewBag.favoriteHero = "Nadda";
+
+            return View();
         }
     }
 }
